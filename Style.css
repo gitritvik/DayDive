@@ -56,7 +56,7 @@ nav img{
 
     color: aliceblue;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
      
 
 
@@ -76,7 +76,99 @@ nav img{
 }
 
 .nav-links ul li:hover::after{
-    width: 100%;
+    width: 100%; 
+}
 
+/* now we modify the text box */
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center ;
 
+}
+
+/* modifying the heading of text box */
+.text-box h1{
+    font-size: 62px;
+}
+
+/* modifying the paragraph text of text box */
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* modifying hero btn text link */
+.hero-btn{
+
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Adding hover effect in the nav link */
+
+.hero-btn:hover{
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 0.5s;
+}
+
+/* we have to hide the menu and close icon on short screens so  */
+
+nav .fa{
+    display: none;
+}
+
+/* now we are going to add responsiveness of the website */
+
+@media(max-width: 700px){
+
+    .text-box h1{
+        font-size: 30px;
+    }
+    
+    .nav-links ul li{  
+        display: block;  
+    
+    }
+
+    .nav-links{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px ;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+
+    }
+
+    .nav-links ul{
+        padding: 30px;
+    }
+
+    
+    
 }

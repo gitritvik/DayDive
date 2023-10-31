@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,100&display=swap" rel="stylesheet">
 
-    <title>Daydive</title>
+<!-- for side menu bar on the right of the short display we add close and open icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
 </head>
 <body>
     <section class = "header">
@@ -20,19 +21,46 @@
             <img src="Imag/logo.png" alt="">  </a>
 
             <!-- In nav-links class we added some navigation links  -->
-            <div class="nav-links">   
+            <div class="nav-links" id="navLinks"> 
+                  <!-- adding an icon of closing for navlinks  -->
+
+                  <i class="fa fa-window-close"  onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">Home</a></li>
                     <li><a href="">Search</a></li>
                     <li><a href="">Blog</a></li>
                     <li><a href="">contact</a></li>
                 </ul>
+                 
             </div>
+
+            <!-- we are adding a menu bar for navlinks -->
+            <i class="fa fa-bars" onclick="showMenu()"> </i>
        
        </nav>
 
+<div class="text-box">
+    <h1>Welcome to Day Dive</h1>
+    <p>You know every day has it's importence let's find out why your day is importent</p>
+    <a href="" class="hero-btn">Stay on this website to know more</a>
+</div>
 
     </section>
+<!-- Some javascript code to perform clicking opration on the shwo and hide icons  -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+
+            navLinks.style.right = "0";
+
+        }
+
+        function hideMenu(){
+
+            navLinks.style.right= "-200px";
+
+}
+    </script>
                                   
     
 </body>
